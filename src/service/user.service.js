@@ -9,7 +9,7 @@ export class UserService{
         let newUser = await UserModel.create(body)
         
         let token = JWT.sign({email:newUser.email},"malina",{expiresIn:"10m"})
-        let url = "http://localhost:3000/api/confirem/" + token
+        let url = "https://telegram-users.onrender.com/api/confirem/" + token
 
 
         let transport = nodemailer.createTransport({
