@@ -5,7 +5,7 @@ dotenv.config()
 async function mongo_connect(){
 
     try {
-        await mongoose.connect("mongodb+srv://Faxriddin:11201111@cluster0.lrftgr1.mongodb.net/email?retryWrites=true&w=majority&appName=Cluster0")
+        await mongoose.connect("mongodb+srv://Faxriddin:11201111@cluster0.lrftgr1.mongodb.net/Talabalar?retryWrites=true&w=majority&appName=Cluster0")
         console.log("MongoDB ga ulandi...");
         
     } catch (error) {

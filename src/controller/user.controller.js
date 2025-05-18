@@ -63,6 +63,30 @@ class UserController{
         }
     }
 
+    async email(req,res){
+        try {          
+            
+            let data = await UserService.EmailUser(req.params.email)
+            res.send(data)
+            
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+
+    async delete(req,res){
+        try {          
+            
+            let data = await UserService.DeleteUser(req.params.email)
+            res.send(data)
+            
+        } catch (error) {
+            res.send(error)
+        }
+    }
+
+
 
 }
 
